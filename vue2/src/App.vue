@@ -7,7 +7,7 @@
       >
         <template v-for="(route, index) in routes">
           <el-submenu
-            v-if="route.children && route.children.length > 0"
+            v-if="route.children && route.children.length > 0 && route.displayMenu"
             :key="route.path + index"
             :index="index + ''"
           >
@@ -17,6 +17,7 @@
             </template>
             <template v-for="(sroute, sindex) in route.children">
               <el-menu-item
+                v-if="sroute.displayMenu"
                 :key="sroute.path + sindex"
                 :index="index + '-' + sindex"
               >
@@ -26,7 +27,7 @@
           </el-submenu>
 
           <el-menu-item
-            v-else
+            v-else-if="route.displayMenu"
             :key="route.path + index"
             index="2">
             <i class="el-icon-menu"></i>

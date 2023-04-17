@@ -10,9 +10,14 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "element-ui": "^2.15.13",
+    "file-saver": "^2.0.5",
+    "html-docx-js": "^0.3.1",
+    "pdf-lib": "^1.17.1",
+    "print-js": "^1.6.0",
     "vue": "^2.6.14",
     "vue-router": "^3.6.5",
-    "vue-virtual-scroll-list": "^2.3.4"
+    "vue-virtual-scroll-list": "^2.3.4",
+    "vue-virtual-scroller": "^1.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

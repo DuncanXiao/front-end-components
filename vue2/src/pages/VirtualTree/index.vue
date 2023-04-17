@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import ElVirtualTree from '@/components/el-virtual-tree/tree.vue'
+import ElVirtualTree from '@/components/ElVirtualTree/tree.vue'
 import nodeList from './config.js'
 export default {
   name: 'VirtualTree',

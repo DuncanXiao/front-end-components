@@ -1,30 +1,40 @@
 const VirtualTree = () => import('@/pages/VirtualTree/index.vue')
 const EmptyRouteView = () => import('@/pages/EmptyRouteView/index.vue')
-const DomDoc = () => import('@/pages/Download/DomDoc/index.vue')
-const DomDoc2 = () => import('@/pages/Download/DomDoc2/index.vue')
+const DomDocByHtml = () => import('@/pages/Download/DomDocByHtml/index.vue')
+const PrintPdfByHtml = () => import('@/pages/Download/printPdfByHtml/index.vue')
+const VirtualSelect = () => import('@/pages/VirtualSelect/index.vue')
 
 const routes = [
   {
     path: '/',
     component: VirtualTree,
-    name: '虚拟treeLIst'
+    name: '虚拟treeLIst',
+    displayMenu: true
   },
   {
-    path: '/download',
-    name: '下载',
+    path: '/downloadPrint',
+    name: '下载与打印',
     component: EmptyRouteView,
+    displayMenu: true,
     children: [
       {
         name: '通过dom下载doc',
-        path: 'dom-doc',
-        component: DomDoc
+        path: 'dom-doc-by-html',
+        component: DomDocByHtml,
+        displayMenu: true
       },
       {
-        name: '通过dom下载doc2',
-        path: 'dom-doc2',
-        component: DomDoc2
+        name: '通过dom打印pdf',
+        path: 'dom-pdf-by-html',
+        component: PrintPdfByHtml,
+        displayMenu: true
       }
     ]
+  }, {
+    path: '/virtual-select',
+    component: VirtualSelect,
+    name: '虚拟treeLIst',
+    displayMenu: true
   }
 ]
 
