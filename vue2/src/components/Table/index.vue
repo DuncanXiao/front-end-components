@@ -144,7 +144,7 @@ export default {
     }
   },
   watch: {
-    paginationConf: function(newV, oldV) {
+    paginationConf: function(newV) {
       this.pagination = newV
     },
     columnList: {

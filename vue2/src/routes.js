@@ -3,6 +3,7 @@ const EmptyRouteView = () => import('@/pages/EmptyRouteView/index.vue')
 const DomDocByHtml = () => import('@/pages/Download/DomDocByHtml/index.vue')
 const PrintPdfByHtml = () => import('@/pages/Download/printPdfByHtml/index.vue')
 const VirtualSelect = () => import('@/pages/VirtualSelect/index.vue')
+const PermissionSystem = () => import('@/pages/PermissionSystem/index.vue')
 
 const routes = [
   {
@@ -34,6 +35,11 @@ const routes = [
     path: '/virtual-select',
     component: VirtualSelect,
     name: '虚拟treeLIst',
+    displayMenu: true
+  }, {
+    path: '/permission',
+    component: PermissionSystem,
+    name: '权限管理',
     displayMenu: true
   }
 ]
